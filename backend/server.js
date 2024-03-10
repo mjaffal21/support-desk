@@ -5,6 +5,7 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 const asyncHandler = require("./middlewares/asyncHandler");
 const errorHandler = require("./middlewares/ErrorHandler");
+const path = require("path");
 
 const PORT = process.env.PORT;
 connectDB();
