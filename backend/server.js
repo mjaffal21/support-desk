@@ -11,7 +11,12 @@ connectDB();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://support-desk-m02r.onrender.com"],
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 
 const usersRoute = require("./routes/userRoute");
